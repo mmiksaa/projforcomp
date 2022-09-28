@@ -1,4 +1,4 @@
-# [view the project](https://projforcomp-bqloxvjwa-mmiksaa.vercel.app/)
+# [view the project](https://projforcomp.vercel.app/)
 
 ## я использовал готовую базу данных [mockapi](https://mockapi.io/)
 
