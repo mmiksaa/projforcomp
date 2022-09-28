@@ -1,0 +1,148 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$black: #222;
+$text-gr: #b0bec5;
+
+body {
+  background-color: #141414;
+  color: $text-gr;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.table {
+  width: 100%;
+  margin: 30px auto 0;
+  font-size: 20px;
+  background-color: #414040;
+  line-height: 1;
+  border-radius: 10px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px 10px 0 0;
+
+  li {
+    width: 25%;
+    padding: 10px 0;
+    margin-left: 10px;
+    height: 100%;
+  }
+
+  li:not(:last-child) {
+    border-right: 2px solid black;
+  }
+
+  & li:first-child {
+    width: 4%;
+    color: #fff;
+  }
+
+  &--top {
+    background-color: $black;
+    color: #ccc;
+
+    & li {
+      padding: 15px 0;
+    }
+  }
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  
+  &__right {
+    display: flex;  
+  }
+}
+
+.filter-search {
+  font-size: 22px;
+
+  &__input {
+    background-color: $black;
+    color: $text-gr;
+    border: 1px solid rgba(176, 190, 197, 0.185);
+    outline: transparent;
+    padding: 0 25px 0 7px;
+  }
+
+  &__close {
+    color: $text-gr;
+    font-size: 25px;
+    margin-left: -25px;
+  }
+}
+
+.dropdown {
+  position: relative;
+
+  & + & {
+    margin-left: 60px;
+  }
+
+  &__item {
+    background-color: $black;
+    color: $text-gr;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 17px;
+    position: relative;
+  }
+  
+  &__active {
+    color: #fff;
+  }
+
+  
+  &__list {
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, 0);
+    
+    li {
+      border-radius: 0;
+      cursor: pointer;
+      border: 1px solid $text-gr;
+      
+      &:hover {
+        color: #fff;
+
+        .dropdown__right {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__right {
+    position: absolute;
+    top: 10px;
+    right: -100%;
+    display: none;
+    z-index: 1;
+  }
+}
+
+.notfound {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.loader-svg {
+  width: 300px;
+  margin-left: 30%;
+}
